@@ -1,0 +1,26 @@
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+.env
+.idea/
+.vscode/
+
+# Datasets and trained weights — too heavy for git
+data/
+checkpoints/
+*.pt
+*.pth
+
+# Notebook checkpoints
+.ipynb_checkpoints/
+
+# OS junk
+Thumbs.db
+.DS_Store
+
+# PowerPoint lock files
+~$*.pptx
+
+# Claude Code local settings
+.claude/
