@@ -82,8 +82,12 @@ A polished Streamlit app showcases every artifact on a single page — ideal
 for filming the 20-minute presentation:
 
 ```bash
-PYTHONPATH=. streamlit run scripts/demo_app.py
+streamlit run scripts/demo_app.py
 ```
+
+> If you see *"No module named 'src'"*, run from the project root with
+> `PYTHONPATH=. streamlit run scripts/demo_app.py` (bash) or
+> `$env:PYTHONPATH="."; streamlit run scripts/demo_app.py` (PowerShell).
 
 Then open <http://localhost:8501>. Five tabs:
 
@@ -105,7 +109,11 @@ and the video, using **synthetic data generated on the fly**. No dataset
 download, no GPU required.
 
 ```bash
+# bash / macOS / Linux
 PYTHONPATH=. python scripts/run_demo_smoke.py
+
+# PowerShell
+$env:PYTHONPATH="."; python scripts/run_demo_smoke.py
 ```
 
 Output:
