@@ -82,12 +82,11 @@ A polished Streamlit app showcases every artifact on a single page — ideal
 for filming the 20-minute presentation:
 
 ```bash
-streamlit run scripts/demo_app.py
+python -m streamlit run scripts/demo_app.py
 ```
 
-> If you see *"No module named 'src'"*, run from the project root with
-> `PYTHONPATH=. streamlit run scripts/demo_app.py` (bash) or
-> `$env:PYTHONPATH="."; streamlit run scripts/demo_app.py` (PowerShell).
+> Using `python -m streamlit` instead of plain `streamlit` avoids
+> Windows PATH issues — works the same on bash, zsh and PowerShell.
 
 Then open <http://localhost:8501>. Five tabs:
 
