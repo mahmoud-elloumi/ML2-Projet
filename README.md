@@ -76,6 +76,28 @@ pip install torch torchvision --index-url https://download.pytorch.org/whl/cpu
 
 ---
 
+## Interactive dashboard (for the video demo)
+
+A polished Streamlit app showcases every artifact on a single page — ideal
+for filming the 20-minute presentation:
+
+```bash
+PYTHONPATH=. streamlit run scripts/demo_app.py
+```
+
+Then open <http://localhost:8501>. Five tabs:
+
+- **Masking** — live multi-block masking with sliders (n_targets, scale, aspect)
+- **Training** — loss curve + run stats from `checkpoints/train_log.csv`
+- **Evaluation** — linear-probe accuracy vs SimCLR / MAE / supervised baseline
+- **Embeddings** — saved t-SNE + loss curve from the smoke demo
+- **Live inference** — upload your own image, see masking + encoded vector
+
+The app pulls everything from `assets/` and `checkpoints/`, so the smoke
+demo (below) should be run once before launching it.
+
+---
+
 ## A. Smoke demo — no internet, no GPU, 5 minutes
 
 `scripts/run_demo_smoke.py` produces every figure needed for the slides
